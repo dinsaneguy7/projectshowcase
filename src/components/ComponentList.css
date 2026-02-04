@@ -1,0 +1,10 @@
+.component-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Preview mode - no gaps */
+.preview-content .component-list {
+  gap: 0;
+}
