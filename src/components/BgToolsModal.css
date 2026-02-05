@@ -1,0 +1,18 @@
+.bgtools-modal{
+  width: 820px;
+  max-width: 95vw;
+  background: var(--card-background, #fff);
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  padding: 16px;
+}
+.bgtools-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.bgtools-body{margin-top:12px;display:grid;gap:12px}
+.bgtools-body .section{padding:8px;border-radius:6px;background:var(--panel-bg,#fafafa)}
+.bgtools-body .preview{max-width:100%;height:auto;border-radius:6px;margin-top:8px}
+.cropper-wrap{position:relative;width:100%;height:320px;background:#222;border-radius:6px;overflow:hidden}
+.crop-actions{margin-top:8px;display:flex;gap:8px}

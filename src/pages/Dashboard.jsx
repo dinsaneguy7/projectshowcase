@@ -8,10 +8,10 @@ import {
   Edit3, 
   Trash2, 
   Copy,
-  Sparkles,
   Clock,
   ChevronRight
 } from 'lucide-react';
+import Logo from '../components/icons/Logo';
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -49,7 +49,7 @@ const Dashboard = () => {
       <header className="dashboard-header">
         <div className="header-content">
           <div className="logo">
-            <Sparkles size={24} />
+            <Logo size={26} />
             <span>Showcase</span>
           </div>
         </div>
@@ -92,67 +92,79 @@ const Dashboard = () => {
         </div>
 
         <div className="showcases-grid">
-          {showcases.map((showcase, index) => (
-            <article 
-              key={showcase.id} 
-              className="showcase-card"
-              style={{ animationDelay: `${index * 0.05}s` }}
-              onClick={() => handleEdit(showcase.id)}
-            >
-              <div className="showcase-thumbnail">
-                <img 
-                  src={showcase.thumbnail} 
-                  alt={showcase.name}
-                  loading="lazy"
-                />
-                <div className="showcase-overlay">
-                  <button 
-                    className="overlay-btn"
-                    onClick={(e) => { e.stopPropagation(); handlePreview(showcase.id); }}
-                    aria-label="Preview"
-                  >
-                    <Eye size={18} />
-                  </button>
-                  <button 
-                    className="overlay-btn"
-                    onClick={(e) => { e.stopPropagation(); handleEdit(showcase.id); }}
-                    aria-label="Edit"
-                  >
-                    <Edit3 size={18} />
-                  </button>
-                  <button 
-                    className="overlay-btn"
-                    onClick={(e) => handleDuplicate(showcase.id, e)}
-                    aria-label="Duplicate"
-                  >
-                    <Copy size={18} />
-                  </button>
-                  <button 
-                    className="overlay-btn overlay-btn-danger"
-                    onClick={(e) => handleDelete(showcase.id, e)}
-                    aria-label="Delete"
-                  >
-                    <Trash2 size={18} />
-                  </button>
-                </div>
+          {showcases.length === 0 ? (
+            <div className="empty-state">
+              <div className="empty-card">
+                <h3>No showcases yet</h3>
+                <p>There are no showcases or products added. Click "New Showcase" to get started.</p>
+                <button className="btn btn-primary" onClick={() => handleCreateNew()}>
+                  <Plus size={16} /> Create Showcase
+                </button>
               </div>
-              
-              <div className="showcase-info">
-                <h3>{showcase.name}</h3>
-                <p>{showcase.tagline}</p>
-                <div className="showcase-meta">
-                  <span className="meta-category">
-                    {categories.find(c => c.id === showcase.category)?.icon}
-                    {categories.find(c => c.id === showcase.category)?.name}
-                  </span>
-                  <span className="meta-date">
-                    <Clock size={12} />
-                    {showcase.createdAt}
-                  </span>
+            </div>
+          ) : (
+            showcases.map((showcase, index) => (
+              <article 
+                key={showcase.id} 
+                className="showcase-card"
+                style={{ animationDelay: `${index * 0.05}s` }}
+                onClick={() => handleEdit(showcase.id)}
+              >
+                <div className="showcase-thumbnail">
+                  <img 
+                    src={showcase.thumbnail} 
+                    alt={showcase.name}
+                    loading="lazy"
+                  />
+                  <div className="showcase-overlay">
+                    <button 
+                      className="overlay-btn"
+                      onClick={(e) => { e.stopPropagation(); handlePreview(showcase.id); }}
+                      aria-label="Preview"
+                    >
+                      <Eye size={18} />
+                    </button>
+                    <button 
+                      className="overlay-btn"
+                      onClick={(e) => { e.stopPropagation(); handleEdit(showcase.id); }}
+                      aria-label="Edit"
+                    >
+                      <Edit3 size={18} />
+                    </button>
+                    <button 
+                      className="overlay-btn"
+                      onClick={(e) => handleDuplicate(showcase.id, e)}
+                      aria-label="Duplicate"
+                    >
+                      <Copy size={18} />
+                    </button>
+                    <button 
+                      className="overlay-btn overlay-btn-danger"
+                      onClick={(e) => handleDelete(showcase.id, e)}
+                      aria-label="Delete"
+                    >
+                      <Trash2 size={18} />
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+                
+                <div className="showcase-info">
+                  <h3>{showcase.name}</h3>
+                  <p>{showcase.tagline}</p>
+                  <div className="showcase-meta">
+                    <span className="meta-category">
+                      {categories.find(c => c.id === showcase.category)?.icon}
+                      {categories.find(c => c.id === showcase.category)?.name}
+                    </span>
+                    <span className="meta-date">
+                      <Clock size={12} />
+                      {showcase.createdAt}
+                    </span>
+                  </div>
+                </div>
+              </article>
+            ))
+          )}
         </div>
       </section>
 

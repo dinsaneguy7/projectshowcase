@@ -7,6 +7,7 @@ import {
   ChevronDown, 
   Image, 
   Box,
+  Settings,
   GripVertical
 } from 'lucide-react';
 import './ComponentWrapper.css';
@@ -17,7 +18,8 @@ const ComponentWrapper = ({
   editorMode, 
   children,
   onOpenBgPicker,
-  onOpenProductPicker
+  onOpenProductPicker,
+  onOpenProductTools
 }) => {
   const { 
     removeComponent, 
@@ -82,6 +84,13 @@ const ComponentWrapper = ({
               title="Change Product"
             >
               <Box size={16} />
+            </button>
+            <button
+              className="component-control-btn"
+              onClick={(e) => { e.stopPropagation(); onOpenProductTools?.(component.id); }}
+              title="Edit Product Image"
+            >
+              <Settings size={16} />
             </button>
           </>
         )}

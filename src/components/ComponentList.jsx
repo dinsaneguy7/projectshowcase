@@ -7,7 +7,7 @@ import ImageTextComponent from './showcase/ImageTextComponent';
 import GalleryComponent from './showcase/GalleryComponent';
 import './ComponentList.css';
 
-const ComponentList = ({ editorMode, onOpenBgPicker, onOpenProductPicker }) => {
+const ComponentList = ({ editorMode, onOpenBgPicker, onOpenProductPicker, onOpenProductTools }) => {
   const { currentShowcase } = useApp();
 
   if (!currentShowcase || !currentShowcase.components) {
@@ -20,7 +20,8 @@ const ComponentList = ({ editorMode, onOpenBgPicker, onOpenProductPicker }) => {
       index,
       editorMode,
       onOpenBgPicker,
-      onOpenProductPicker
+      onOpenProductPicker,
+      onOpenProductTools
     };
 
     switch (component.type) {

@@ -9,6 +9,7 @@ import {
   Plus,
   Settings
 } from 'lucide-react';
+import BgToolsModal from '../components/BgToolsModal';
 import EditorSidebar from '../components/EditorSidebar';
 import ComponentEditor from '../components/ComponentEditor';
 import ComponentList from '../components/ComponentList';
@@ -34,6 +35,8 @@ const Editor = () => {
   const [showAddModal, setShowAddModal] = useState(false);
   const [showBgPicker, setShowBgPicker] = useState(false);
   const [showProductPicker, setShowProductPicker] = useState(false);
+  const [showBgTools, setShowBgTools] = useState(false);
+  const [showBgToolsTarget, setShowBgToolsTarget] = useState('background');
   const [activePickerComponentId, setActivePickerComponentId] = useState(null);
 
   useEffect(() => {
@@ -79,6 +82,12 @@ const Editor = () => {
     setShowProductPicker(true);
   };
 
+  const openProductTools = (componentId) => {
+    setActivePickerComponentId(componentId);
+    setShowBgToolsTarget('product');
+    setShowBgTools(true);
+  };
+
   return (
     <div className="editor">
       {/* Header */}
@@ -96,6 +105,9 @@ const Editor = () => {
         <div className="header-actions">
           <button className="btn btn-icon btn-ghost" onClick={toggleMode}>
             {editorMode === 'edit' ? <Eye size={20} /> : <Edit3 size={20} />}
+          </button>
+          <button className="btn btn-icon btn-ghost" title="Background tools" onClick={()=>setShowBgTools(true)}>
+            <Settings size={18} />
           </button>
           <button className="btn btn-primary btn-sm" onClick={handleSave}>
             <Save size={16} />
@@ -142,6 +154,7 @@ const Editor = () => {
           editorMode={editorMode}
           onOpenBgPicker={openBgPicker}
           onOpenProductPicker={openProductPicker}
+          onOpenProductTools={openProductTools}
         />
         
         {/* Add Component Button */}
@@ -175,6 +188,14 @@ const Editor = () => {
         <BackgroundPicker 
           componentId={activePickerComponentId}
           onClose={() => setShowBgPicker(false)} 
+        />
+      )}
+
+      {showBgTools && (
+        <BgToolsModal
+          componentId={activePickerComponentId || (currentShowcase.components[0] && currentShowcase.components[0].id)}
+          target={showBgToolsTarget}
+          onClose={() => { setShowBgTools(false); setShowBgToolsTarget('background'); }}
         />
       )}
       

@@ -9,6 +9,7 @@ const ImageOnlyComponent = ({ component, index, editorMode, onOpenBgPicker, onOp
   const { updateComponent, selectedComponentId, setSelectedComponentId } = useApp();
   
   const background = component.backgroundId ? getBackgroundById(component.backgroundId) : null;
+  const backgroundUrl = component.backgroundImage ? component.backgroundImage : (background ? background.url : null);
   const product = component.productId ? getProductById(component.productId) : null;
   
   const isSelected = selectedComponentId === component.id;
@@ -24,6 +25,14 @@ const ImageOnlyComponent = ({ component, index, editorMode, onOpenBgPicker, onOp
 
   const handleProductScaleChange = (scale) => {
     updateComponent(component.id, { productScale: scale });
+  };
+
+  const handleProductRotationChange = (rotation) => {
+    updateComponent(component.id, { productRotation: rotation });
+  };
+
+  const handleOpenProductTools = () => {
+    onOpenProductTools?.(component.id);
   };
 
   const handleSelect = () => {
@@ -47,8 +56,8 @@ const ImageOnlyComponent = ({ component, index, editorMode, onOpenBgPicker, onOp
         <div 
           className="image-bg"
           style={{ 
-            backgroundImage: background ? `url(${background.url})` : 'none',
-            backgroundColor: background ? 'transparent' : '#f5f5f7'
+            backgroundImage: backgroundUrl ? `url(${backgroundUrl})` : 'none',
+            backgroundColor: backgroundUrl ? 'transparent' : '#f5f5f7'
           }}
         >
           {/* Overlay Title */}
@@ -71,11 +80,15 @@ const ImageOnlyComponent = ({ component, index, editorMode, onOpenBgPicker, onOp
           {product && (
             <DraggableProduct
               product={product}
+              imageSrc={component.productImage || (product && product.url)}
+              rotation={component.productRotation || 0}
               position={component.productPosition || { x: 50, y: 50 }}
               scale={component.productScale || 1}
               onPositionChange={handleProductPositionChange}
               onScaleChange={handleProductScaleChange}
+              onRotationChange={handleProductRotationChange}
               editable={isEditMode && isSelected}
+              onEditImage={handleOpenProductTools}
             />
           )}
 
@@ -126,6 +139,21 @@ const ImageOnlyComponent = ({ component, index, editorMode, onOpenBgPicker, onOp
                 step="0.1"
               />
               <span className="scale-value">{(component.productScale || 1).toFixed(1)}</span>
+            </div>
+            <div className="control-group">
+              <label>Rotate</label>
+              <input
+                type="range"
+                value={component.productRotation || 0}
+                onChange={(e) => handleProductRotationChange(parseFloat(e.target.value))}
+                min="-180"
+                max="180"
+                step="1"
+              />
+              <span className="scale-value">{(component.productRotation || 0).toFixed(0)}°</span>
+            </div>
+            <div className="control-group">
+              <button className="btn" onClick={handleOpenProductTools}>Edit Product Image</button>
             </div>
           </div>
         )}

@@ -6,19 +6,19 @@ export const backgrounds = [
   {
     id: 'bg-1',
     name: 'Marble White',
-    url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    url: '/dist/bg/bg1.png',
     category: 'minimal'
   },
   {
     id: 'bg-2',
     name: 'Soft Gradient',
-    url: 'https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=800&q=80',
+    url: '/dist/bg/bg2.png',
     category: 'gradient'
   },
   {
     id: 'bg-3',
     name: 'Concrete Gray',
-    url: 'https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?w=800&q=80',
+    url: '/dist/bg/bg3.png',
     category: 'texture'
   },
   {
@@ -30,78 +30,73 @@ export const backgrounds = [
   {
     id: 'bg-5',
     name: 'Ocean Blue',
-    url: 'https://images.unsplash.com/photo-1507400492013-162706c8c05e?w=800&q=80',
+    url: '/dist/bg/bg5.png',
     category: 'gradient'
   },
   {
     id: 'bg-6',
     name: 'Sand Beige',
-    url: 'https://images.unsplash.com/photo-1558618047-f4b511e56647?w=800&q=80',
+    url: '/dist/bg/bg6.png',
     category: 'minimal'
   },
   {
     id: 'bg-7',
     name: 'Dark Moody',
-    url: 'https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?w=800&q=80',
+    url: '/dist/bg/bg7.png',
     category: 'dark'
   },
   {
     id: 'bg-8',
     name: 'Warm Sunset',
-    url: 'https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?w=800&q=80',
+    url: '/bg/bg8.png', // moved to public/bg/bg8.png
     category: 'gradient'
   },
   {
     id: 'bg-9',
     name: 'Forest Green',
-    url: 'https://images.unsplash.com/photo-1557682260-96773eb01377?w=800&q=80',
+    url: '/bg/bg9.png', // moved to public/bg/bg9.png       
     category: 'gradient'
   },
   {
     id: 'bg-10',
     name: 'Pure White',
-    url: 'https://images.unsplash.com/photo-1533628635777-112b2239b1c7?w=800&q=80',
+    url: '/bg/bg10.png', // moved to public/bg/bg10.png
     category: 'minimal'
   },
   {
     id: 'bg-11',
     name: 'Luxury Gold',
-    url: 'https://images.unsplash.com/photo-1557682233-43e671455dfa?w=800&q=80',
+    url: '/bg/bg11.png', // moved to public/bg/bg11.png
     category: 'gradient'
   },
   {
     id: 'bg-12',
     name: 'Velvet Black',
-    url: 'https://images.unsplash.com/photo-1557682257-2f9c37a3a5f3?w=800&q=80',
+    url: '/bg/bg12.png', // moved to public/bg/bg12.png
     category: 'dark'
   },
   {
     id: 'bg-13',
     name: 'Linen Texture',
-    url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    url: '/bg/bg13.png', // moved to public/bg/bg13.png
     category: 'texture'
   },
   {
     id: 'bg-14',
     name: 'Dusty Rose',
-    url: 'https://images.unsplash.com/photo-1557682268-e3955ed5d83f?w=800&q=80',
+    url: '/bg/bg14.png', // moved to public/bg/bg14.png
     category: 'gradient'
   },
   {
     id: 'bg-15',
     name: 'Mint Fresh',
-    url: 'https://images.unsplash.com/photo-1557683311-eac922347aa1?w=800&q=80',
+    url: '/bg/bg15.png', // moved to public/bg/bg15.png
     category: 'gradient'
   }
 ];
 
 // Product Categories
 export const categories = [
-  {
-    id: 'watches',
-    name: 'Watches',
-    icon: '⌚'
-  },
   {
     id: 'purses',
     name: "Women's Purses",
@@ -111,118 +106,73 @@ export const categories = [
     id: 'earrings',
     name: 'Earrings',
     icon: '💎'
-  },
-  {
-    id: 'accessories',
-    name: 'Caps & Belts',
-    icon: '🧢'
   }
 ];
 
 // Product Images by Category (transparent PNGs from placeholder URLs)
 export const products = {
-  watches: [
-    {
-      id: 'watch-1',
-      name: 'Classic Gold',
-      url: 'https://www.pngall.com/wp-content/uploads/2016/04/Wrist-Watch-PNG.png',
-      thumbnail: 'https://www.pngall.com/wp-content/uploads/2016/04/Wrist-Watch-PNG.png'
-    },
-    {
-      id: 'watch-2',
-      name: 'Sport Silver',
-      url: 'https://www.pngall.com/wp-content/uploads/2016/04/Watch-Free-Download-PNG.png',
-      thumbnail: 'https://www.pngall.com/wp-content/uploads/2016/04/Watch-Free-Download-PNG.png'
-    },
-    {
-      id: 'watch-3',
-      name: 'Minimalist Black',
-      url: 'https://www.pngall.com/wp-content/uploads/2016/04/Watch-PNG-File.png',
-      thumbnail: 'https://www.pngall.com/wp-content/uploads/2016/04/Watch-PNG-File.png'
-    },
-    {
-      id: 'watch-4',
-      name: 'Luxury Diamond',
-      url: 'https://www.pngall.com/wp-content/uploads/2016/04/Watch-Transparent.png',
-      thumbnail: 'https://www.pngall.com/wp-content/uploads/2016/04/Watch-Transparent.png'
-    }
-  ],
   purses: [
     {
-      id: 'purse-1',
+      id: 'bag-1',
       name: 'Designer Tote',
-      url: 'https://www.pngall.com/wp-content/uploads/2016/06/Handbag-Free-PNG-Image.png',
-      thumbnail: 'https://www.pngall.com/wp-content/uploads/2016/06/Handbag-Free-PNG-Image.png'
+      url: '/dist/product/product2/p1.png',
+      thumbnail: '/dist/product/product2/p1.png'
     },
     {
-      id: 'purse-2',
+      id: 'bag-2',
       name: 'Leather Clutch',
-      url: 'https://www.pngall.com/wp-content/uploads/2016/06/Handbag-PNG.png',
-      thumbnail: 'https://www.pngall.com/wp-content/uploads/2016/06/Handbag-PNG.png'
+      url: '/dist/product/product2/p2.png',
+      thumbnail: '/dist/product/product2/p2.png'
     },
     {
-      id: 'purse-3',
+      id: 'bag-3',
       name: 'Mini Shoulder',
-      url: 'https://www.pngall.com/wp-content/uploads/2016/06/Handbag-PNG-File.png',
-      thumbnail: 'https://www.pngall.com/wp-content/uploads/2016/06/Handbag-PNG-File.png'
+      url: '/dist/product/product2/p3.png',
+      thumbnail: '/dist/product/product2/p3.png'
     },
     {
-      id: 'purse-4',
+      id: 'bag-4',
       name: 'Evening Bag',
-      url: 'https://www.pngall.com/wp-content/uploads/2016/06/Handbag-Transparent.png',
-      thumbnail: 'https://www.pngall.com/wp-content/uploads/2016/06/Handbag-Transparent.png'
+      url: '/dist/product/product2/p4.png',
+      thumbnail: '/dist/product/product2/p4.png'
+    },
+    {
+      id: 'bag-5',
+      name: 'Bag Extra 1',
+      url: '/dist/product/product2/p7.png',
+      thumbnail: '/dist/product/product2/p7.png'
+    },
+    {
+      id: 'bag-6',
+      name: 'Bag Extra 2',
+      url: '/dist/product/product2/p8.png',
+      thumbnail: '/dist/product/product2/p8.png'
     }
   ],
   earrings: [
     {
       id: 'earring-1',
       name: 'Pearl Drops',
-      url: 'https://www.pngall.com/wp-content/uploads/2017/05/Earrings-PNG-HD.png',
-      thumbnail: 'https://www.pngall.com/wp-content/uploads/2017/05/Earrings-PNG-HD.png'
+      url: '/product/product3/p1.png',
+      thumbnail: '/product/product3/p1.png'
     },
     {
       id: 'earring-2',
       name: 'Diamond Studs',
-      url: 'https://www.pngall.com/wp-content/uploads/2017/05/Earrings-PNG-Clipart.png',
-      thumbnail: 'https://www.pngall.com/wp-content/uploads/2017/05/Earrings-PNG-Clipart.png'
+      url: '/product/product3/p2.png',
+      thumbnail: '/product/product3/p2.png'
     },
     {
       id: 'earring-3',
       name: 'Gold Hoops',
-      url: 'https://www.pngall.com/wp-content/uploads/2017/05/Earrings-PNG-File.png',
-      thumbnail: 'https://www.pngall.com/wp-content/uploads/2017/05/Earrings-PNG-File.png'
+      url: '/product/product3/p3.png',
+      thumbnail: '/product/product3/p3.png'
     },
     {
       id: 'earring-4',
       name: 'Crystal Dangles',
-      url: 'https://www.pngall.com/wp-content/uploads/2017/05/Earrings-Free-PNG-Image.png',
-      thumbnail: 'https://www.pngall.com/wp-content/uploads/2017/05/Earrings-Free-PNG-Image.png'
-    }
-  ],
-  accessories: [
-    {
-      id: 'cap-1',
-      name: 'Classic Cap',
-      url: 'https://www.pngall.com/wp-content/uploads/2016/03/Cap-PNG-Image.png',
-      thumbnail: 'https://www.pngall.com/wp-content/uploads/2016/03/Cap-PNG-Image.png'
-    },
-    {
-      id: 'cap-2',
-      name: 'Snapback',
-      url: 'https://www.pngall.com/wp-content/uploads/2016/03/Cap-PNG.png',
-      thumbnail: 'https://www.pngall.com/wp-content/uploads/2016/03/Cap-PNG.png'
-    },
-    {
-      id: 'belt-1',
-      name: 'Leather Belt',
-      url: 'https://www.pngall.com/wp-content/uploads/2016/05/Belt-Free-PNG-Image.png',
-      thumbnail: 'https://www.pngall.com/wp-content/uploads/2016/05/Belt-Free-PNG-Image.png'
-    },
-    {
-      id: 'belt-2',
-      name: 'Designer Belt',
-      url: 'https://www.pngall.com/wp-content/uploads/2016/05/Belt-PNG-Clipart.png',
-      thumbnail: 'https://www.pngall.com/wp-content/uploads/2016/05/Belt-PNG-Clipart.png'
+      url: '/product/product3/p4.png',
+      thumbnail: '/product/product3/p4.png'
     }
   ]
 };
@@ -231,53 +181,17 @@ export const products = {
 export const demoShowcases = [
   {
     id: 'showcase-1',
-    name: 'Luxury Watch Collection',
-    tagline: 'Timeless Elegance',
-    category: 'watches',
-    thumbnail: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80',
-    createdAt: '2024-01-15',
-    components: [
-      {
-        id: 'comp-1',
-        type: 'hero',
-        backgroundId: 'bg-1',
-        productId: 'watch-1',
-        overlayTitle: 'THE TIMEPIECE',
-        productPosition: { x: 50, y: 50 },
-        productScale: 1
-      },
-      {
-        id: 'comp-2',
-        type: 'text',
-        title: 'Crafted Excellence',
-        content: 'Each watch is meticulously crafted with precision engineering and premium materials.'
-      },
-      {
-        id: 'comp-3',
-        type: 'image-text',
-        backgroundId: 'bg-3',
-        productId: 'watch-2',
-        imagePosition: 'left',
-        title: 'Swiss Movement',
-        content: 'Powered by authentic Swiss movement for unparalleled accuracy.',
-        productPosition: { x: 50, y: 50 },
-        productScale: 0.9
-      }
-    ]
-  },
-  {
-    id: 'showcase-2',
     name: 'Designer Handbags',
     tagline: 'Style Meets Function',
     category: 'purses',
-    thumbnail: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&q=80',
+    thumbnail: '/dist/product/product2/p1.png',
     createdAt: '2024-01-20',
     components: [
       {
         id: 'comp-1',
         type: 'hero',
         backgroundId: 'bg-4',
-        productId: 'purse-1',
+        productId: 'bag-1',
         overlayTitle: 'THE BAG',
         productPosition: { x: 50, y: 50 },
         productScale: 1
@@ -291,11 +205,11 @@ export const demoShowcases = [
     ]
   },
   {
-    id: 'showcase-3',
+    id: 'showcase-2',
     name: 'Fine Jewelry',
     tagline: 'Shine Bright',
     category: 'earrings',
-    thumbnail: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&q=80',
+    thumbnail: '/product/product3/p1.png',
     createdAt: '2024-01-25',
     components: [
       {
@@ -304,25 +218,6 @@ export const demoShowcases = [
         backgroundId: 'bg-7',
         productId: 'earring-1',
         overlayTitle: 'THE JEWEL',
-        productPosition: { x: 50, y: 50 },
-        productScale: 1
-      }
-    ]
-  },
-  {
-    id: 'showcase-4',
-    name: 'Urban Accessories',
-    tagline: 'Express Yourself',
-    category: 'accessories',
-    thumbnail: 'https://images.unsplash.com/photo-1521369909029-2afed882baee?w=400&q=80',
-    createdAt: '2024-02-01',
-    components: [
-      {
-        id: 'comp-1',
-        type: 'hero',
-        backgroundId: 'bg-12',
-        productId: 'cap-1',
-        overlayTitle: 'THE ESSENTIAL',
         productPosition: { x: 50, y: 50 },
         productScale: 1
       }
@@ -364,6 +259,15 @@ export const componentTemplates = [
   }
 ];
 
+// Gallery items from public/gallery
+export const galleryItems = [
+  '/gallery/bags/p1.png',
+  '/gallery/bags/p2.png',
+  '/gallery/bags/p3.png',
+  '/gallery/bags/p4.png',
+  '/gallery/bags/p5.png'
+];
+
 // Default new component data
 export const defaultComponentData = {
   hero: {
@@ -371,14 +275,18 @@ export const defaultComponentData = {
     productId: null,
     overlayTitle: 'THE ITEM',
     productPosition: { x: 50, y: 50 },
-    productScale: 1
+    productScale: 1,
+    productRotation: 0,
+    productImage: null
   },
   'image-only': {
     backgroundId: 'bg-1',
     productId: null,
     overlayTitle: '',
     productPosition: { x: 50, y: 50 },
-    productScale: 1
+    productScale: 1,
+    productRotation: 0,
+    productImage: null
   },
   text: {
     title: 'Feature Title',
@@ -391,7 +299,9 @@ export const defaultComponentData = {
     title: 'Feature Title',
     content: 'Add a brief description.',
     productPosition: { x: 50, y: 50 },
-    productScale: 0.9
+    productScale: 0.9,
+    productRotation: 0,
+    productImage: null
   },
   gallery: {
     images: [],
