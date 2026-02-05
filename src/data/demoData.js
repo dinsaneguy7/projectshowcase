@@ -6,19 +6,20 @@ export const backgrounds = [
   {
     id: 'bg-1',
     name: 'Marble White',
-    url: '/dist/bg/bg1.png',
+    // Note: prefer public/ assets (e.g. public/bg/) for reliable hosting on Vercel
+    url: '/bg/bg1.png',
     category: 'minimal'
   },
   {
     id: 'bg-2',
     name: 'Soft Gradient',
-    url: '/dist/bg/bg2.png',
+    url: '/bg/bg2.png',
     category: 'gradient'
   },
   {
     id: 'bg-3',
     name: 'Concrete Gray',
-    url: '/dist/bg/bg3.png',
+    url: '/bg/bg3.png',
     category: 'texture'
   },
   {
@@ -30,67 +31,67 @@ export const backgrounds = [
   {
     id: 'bg-5',
     name: 'Ocean Blue',
-    url: '/dist/bg/bg5.png',
+    url: '/bg/bg5.png',
     category: 'gradient'
   },
   {
     id: 'bg-6',
     name: 'Sand Beige',
-    url: '/dist/bg/bg6.png',
+    url: '/bg/bg6.png',
     category: 'minimal'
   },
   {
     id: 'bg-7',
     name: 'Dark Moody',
-    url: '/dist/bg/bg7.png',
+    url: '/bg/bg7.png',
     category: 'dark'
   },
   {
     id: 'bg-8',
     name: 'Warm Sunset',
-    url: '/bg/bg8.png', // moved to public/bg/bg8.png
+    url: '/bg/bg8.png', // ensure this file exists in public/bg/
     category: 'gradient'
   },
   {
     id: 'bg-9',
     name: 'Forest Green',
-    url: '/bg/bg9.png', // moved to public/bg/bg9.png       
+    url: '/bg/bg9.png', // ensure this file exists in public/bg/
     category: 'gradient'
   },
   {
     id: 'bg-10',
     name: 'Pure White',
-    url: '/bg/bg10.png', // moved to public/bg/bg10.png
+    url: '/bg/bg10.png', // ensure this file exists in public/bg/
     category: 'minimal'
   },
   {
     id: 'bg-11',
     name: 'Luxury Gold',
-    url: '/bg/bg11.png', // moved to public/bg/bg11.png
+    url: '/bg/bg11.png', // ensure this file exists in public/bg/
     category: 'gradient'
   },
   {
     id: 'bg-12',
     name: 'Velvet Black',
-    url: '/bg/bg12.png', // moved to public/bg/bg12.png
+    url: '/bg/bg12.png', // ensure this file exists in public/bg/
     category: 'dark'
   },
   {
     id: 'bg-13',
     name: 'Linen Texture',
-    url: '/bg/bg13.png', // moved to public/bg/bg13.png
+    url: '/bg/bg13.png', // ensure this file exists in public/bg/
     category: 'texture'
   },
   {
     id: 'bg-14',
     name: 'Dusty Rose',
-    url: '/bg/bg14.png', // moved to public/bg/bg14.png
+    url: '/bg/bg14.png', // ensure this file exists in public/bg/
     category: 'gradient'
   },
   {
     id: 'bg-15',
     name: 'Mint Fresh',
-    url: '/bg/bg15.png', // moved to public/bg/bg15.png
+    url: '/bg/bg15.png', // ensure this file exists in public/bg/
     category: 'gradient'
   }
 ];
@@ -115,38 +116,38 @@ export const products = {
     {
       id: 'bag-1',
       name: 'Designer Tote',
-      url: '/dist/product/product2/p1.png',
-      thumbnail: '/dist/product/product2/p1.png'
+      url: '/product/product2/p1.png',
+      thumbnail: '/product/product2/p1.png'
     },
     {
       id: 'bag-2',
       name: 'Leather Clutch',
-      url: '/dist/product/product2/p2.png',
-      thumbnail: '/dist/product/product2/p2.png'
+      url: '/product/product2/p2.png',
+      thumbnail: '/product/product2/p2.png'
     },
     {
       id: 'bag-3',
       name: 'Mini Shoulder',
-      url: '/dist/product/product2/p3.png',
-      thumbnail: '/dist/product/product2/p3.png'
+      url: '/product/product2/p3.png',
+      thumbnail: '/product/product2/p3.png'
     },
     {
       id: 'bag-4',
       name: 'Evening Bag',
-      url: '/dist/product/product2/p4.png',
-      thumbnail: '/dist/product/product2/p4.png'
+      url: '/product/product2/p4.png',
+      thumbnail: '/product/product2/p4.png'
     },
     {
       id: 'bag-5',
       name: 'Bag Extra 1',
-      url: '/dist/product/product2/p7.png',
-      thumbnail: '/dist/product/product2/p7.png'
+      url: '/product/product2/p7.png',
+      thumbnail: '/product/product2/p7.png'
     },
     {
       id: 'bag-6',
       name: 'Bag Extra 2',
-      url: '/dist/product/product2/p8.png',
-      thumbnail: '/dist/product/product2/p8.png'
+      url: '/product/product2/p8.png',
+      thumbnail: '/product/product2/p8.png'
     }
   ],
   earrings: [
@@ -184,7 +185,7 @@ export const demoShowcases = [
     name: 'Designer Handbags',
     tagline: 'Style Meets Function',
     category: 'purses',
-    thumbnail: '/dist/product/product2/p1.png',
+    thumbnail: '/product/product2/p1.png',
     createdAt: '2024-01-20',
     components: [
       {
